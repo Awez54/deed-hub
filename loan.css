@@ -1,0 +1,90 @@
+#bankr{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center ;
+}
+/* loan.css */
+
+/* Global transition for all elements */
+* {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  
+  /* Hover effect on navigation link */
+  a.text-body-emphasis:hover {
+    color: white; /* Green color on hover */
+  }
+  
+  /* Hover effect on collapse button */
+  .btn-primary.mb-3:hover {
+    background-color: #FF731D; /* Green color on hover */
+    color: #fff; /* White text color on hover */
+  }
+  
+  /* Hover effect on header border */
+  header.border-bottom:hover {
+    border-color:#FF731D;; /* Green color on hover */
+  }
+  
+  /* Hover effect on jumbotron background */
+  .bg-body-tertiary.jumbotron-bg:hover {
+    background-color: #e8f5e9; /* Light green color on hover */
+  }
+  
+  /* Hover effect on bank details box shadow */
+  .h-100.p-2.bg-body-tertiary.border.rounded-3:hover {
+    box-shadow: 0 0 20px rgba(100, 141, 239, 0.7); /* Green box shadow on hover */
+  }
+  
+  /* Hover effect on footer color */
+  footer.text-body-secondary.border-top:hover {
+    color: #5F9DF7; /* Green color on hover */
+  }
+
+
+  
+
+  
+  /* Button pulse animation */
+  @keyframes pulseButton {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  
+  
+  /* Container scaling transition */
+
+  
+  /* Hover effect on container scaling */
+  .container.mb-4:hover {
+    transform: scale(1.05);
+  }
+  footer {
+    display: block;
+    background-color:#5F9DF7;
+    color: white;
+  }
+  button{
+    background-color: #FF731D;
+  }
+  
+  
+  
+
+
+
+  
+  
+  
+  
+  

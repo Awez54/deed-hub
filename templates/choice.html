@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #b {
+            text-align: center;
+        }
+
+        .login-box {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333333;
+        }
+
+        button {
+            font-size: 25px;
+            background-color: #5F9DF7;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a button {
+            background-color: #5F9DF7;
+        }
+
+        a button:hover {
+            background-color: #0b7dda;
+        }
+    </style>
+</head>
+<body>
+    <div id="b">
+        <div class="login-box">
+            <h2>Site Details 📄 </h2>
+            
+            <button onclick="nextpage()">Sell</button>
+            
+            <a href="{{ url_for('display_data') }}">
+                <br>
+                <br>
+                <button>Buy</button>
+            </a>
+            
+            <button onclick="area()">land Rates Trends</button>
+            
+            <script>
+                function nextpage() {
+                    window.location.href = '/index';
+                }
+
+                function area() {
+                    window.location.href = '/area_display';
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- navbar -->
+  <div class="container   nav1mx-0px sh" id="navb">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4  border-bottom back">
+      <a href="" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none ">
+        <img src="./images/logofinal.png"class="bi me-2" width="80" height="64" alt="">
+        <span style="font-size: 2rem;"><b>Deed Hub</b></span>
+      </a>
+
+      <ul class="nav nav-pills" >
+        
+        <li class="nav-item"><a href="./procedure.html" class="nav-link"><b>Procedure</b></a></li>
+        <li class="nav-item"><a href="./documents.html" class="nav-link"><b>Documents</b></a></li>
+        <li class="nav-item"><a onclick="window.location.href='http://127.0.0.1:5000'"class="nav-link"><b>Sell/Buy</b></a></li>
+        <li class="nav-item"><a href="#about" class="nav-link"><b>About Us</b></a></li>
+
+      </ul>
+    </header>
+  </div>
+  
+  <!-- scroling images -->
+  <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+    </div>
+    <div class="carousel-inner" id="pic">
+      <div class="carousel-item" >
+        <img src="./images/ilse-s75vLE7boKo-unsplash.jpg" width="2000px" height="500px">
+        <div class="container">
+          <div class="carousel-caption text-start mb-4">
+            <h1  class="text-start" style="margin-left: 50px;white-space: nowrap">Empowering Your Landownership Journey</h1>
+            <p >
+              "Discover the Future of Land Ownership with Deed Hub: Your Trusted Guide, Providing Comprehensive Resources and Support to Empower You Through Every Step of Your Unique Landownership Journey"</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/federico-respini-sYffw0LNr7s-unsplash.jpg" width="2000px" height="500px">
+        <div class="container">
+          <div class="carousel-caption mb-4">
+            <h1  class="text-start" style="margin-left: -20px; white-space: nowrap">Navigate the Land Registration Maze with Confidence</h1>
+            <p style="margin-left: -20px;">
+              "Land Registration Simplified: Deed Hub guides you through the intricate process of land registration, ensuring a hassle-free experience. Explore transparent procedures, connect with trusted buyers, and navigate the complexities of real estate with confidence. Your journey to secure land ownership begins here"  </p>
+            <!-- to add button -->
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item active">
+        <img src="./images/aldrin-rachman-pradana-k51kZBpbe0E-unsplash.jpg" width="2000px" height="500px">
+        <div class="container">
+          <div class="carousel-caption  mb-4 text-end">
+            <h1 style="padding-right: 100px;">Faster Deeds, More Time for Living.</h1>
+            <p>Accelerate the Deed Process, Unlock Time for Life's Moments. At Deed Hub, we redefine land ownership by streamlining the registration journey, providing a fast and efficient experience. With us, you gain more than deeds; you gain time to savor every living moment without the hassle</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <h2  class="pb-2 border-bottom" id="load"> We also help with </h2>
+  <div class="container marketing">
+
+    <!-- features -->
+    <div class="row"  style="margin-top: 30px";>
+      <div class="col-lg-3" id="zoom" >
+        <img  class="ms-5" src="./images/loan2.png" class="simg" alt="" >
+        <h2 class="fw-normal">Loan</h2>
+        <p>
+          
+"Unlock Land Loan Details: Explore eligibility, required documents, and financing options. Your journey to land ownership starts here."</p>
+        <p><a class="btn more border" href="./loan.html">View details »</a></p>
+      </div>
+      <div class="col-lg-3" id="zoom">
+        <img  class="ms-5" src="./images/fake2.jpg" class="simg" alt="">
+        <h2 class="fw-normal">Fraud</h2>
+        <p>"Stay Informed: Uncover potential fraud risks. Explore our guide to recognize and avoid common pitfalls in real estate transactions."</p>
+        <p><a class="btn more border" href="./fraud.html">View details »</a></p>
+      </div>
+      <div class="col-lg-3" id="zoom">
+        <img  class="ms-5" src="./images/tax.png" class="simg" alt="" >
+        <h2 class="fw-normal ">calculator/price</h2>
+        <p>"Smart Finances: Access our tax guide and calculator to make informed financial decisions. Understand tax implications and calculate your expenses with ease."</p>
+        <p><a class="btn more border" href="./cal1.html">View details »</a></p>
+      </div>
+      <div class="col-lg-3" id="zoom">
+        <img  class="ms-5" src="./images/query.png" class="simg" alt="" >
+        <h2 class="fw-normal">Query</h2>
+        <p>"Need Assistance? Drop us a Mail: Have questions? Reach out to us via email for prompt and personalized support. Our team is here to address your queries"</p>
+        <p><a class="btn more border" href="./email.html">View details »</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <section class="heor mt-5" >
+    <div class="container">
+    <h2 class="border-bottom" id="about">About Us</h1>
+      <div class ="hero-conetent">
+        <div class="float-start me-3">
+          <img id="abt" src="./images/logofinal.png" alt="Floating Image" class="float-left mr-3 img-thumbnail pt-3">
+      </div>
+        <p class="fs-5 pt-3" style="text-align: left;">Welcome to Deed Hub, your go-to destination for a simplified land registration and property advertising experience. At Deed Hub, we are dedicated to providing landowners with a streamlined registration process while connecting prospective buyers with a carefully curated selection of registered lands. Our commitment to transparency and community engagement ensures a trustworthy platform for all your real estate needs.<br>
+
+        Our focus is on simplifying the complex procedures of land ownership. We guide landowners and buyers through every step of the registration process, offering a hassle-free and transparent experience. Emphasizing the importance of accurate documentation, we provide clear insights into the required paperwork for land registration, making it easy for individuals to navigate the process.<br>
+       
+
+        </p>
+      </div>
+       
+   </div>
+  </section>
+  <!-- bot link -->
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+  <script src="https://mediafiles.botpress.cloud/4c587de7-7762-4b15-a6b0-c63e59f2a212/webchat/config.js" defer></script>
+ <script>
+   function mail(){
+    window.location.href='./templates/contact.html'
+   }
+ </script>
+</body>
+
+
+<div class="container mt-5">
+  <div class="scrolling-text-container">
+      <div class="scrolling-text">
+          <p class="lead running-text">Disclaimer: The content on this website is intended for informational purposes only and is not a substitute for legal advice. This platform provides general information and resources to help you understand the land registration landscape, but it does not replace the need for legal expertise in specific cases.</p>
+      </div>
+  </div>
+</div>
+<footer id="foot">
+  
+    <div class="container">
+      
+        <footer class="py-3 my-4">
+          
+          <ul class="nav justify-content-center foooooo " >
+            <li class="nav-item" style="color: white;"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="#load" class="nav-link px-2 text-body-secondary">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Queries</a></li>
+          </ul>
+          <script>
+            function  feedb(){
+              window.location.href='/feedback_form'
+            }
+          </script>
+          <p class="text-center text-body-secondary">@Deedhub</p>
+        </footer>
+      </div>
+</footer>
+</html>

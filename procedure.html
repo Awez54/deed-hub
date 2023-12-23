@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="proceduree.css" rel="stylesheet">
+  <style>
+    /* :root {
+      --primary-color: #212121;
+      --background-color: #111;
+      --font: sans-serif;
+    } */
+    
+    * {
+      margin: 0;
+      padding: 0;
+    }
+     h1{
+      color: black;
+      align-items: center;
+      text-align: center;
+      text-shadow: 0ch;
+      padding: 20px;
+      margin-top: 0px;
+    
+    }
+   #head{
+       text-align: left;
+    }
+    
+    body {
+      background: var(--background-color);
+      font-family: var(--font);
+      display: flex;
+      justify-content: center;
+    }
+    
+    /* Timeline Container */
+    .timeline {
+      background: var(--primary-color);
+      margin: 20px auto;
+      padding: 0px;
+    }
+    
+    /* Card container */
+    .card {
+      position: relative;
+     
+      max-width: 800px;
+      max-height: 800px;
+      opacity: 0; /* Initially set opacity to 0 */
+    transform: translateY(90px); /* Move the card down */
+    transition: opacity 0.4s ease, transform 0.5s ease;
+    }
+    
+    /* setting padding based on even or odd */
+    .card:nth-child(odd) {
+      padding: 30px 0 30px 30px;
+    }
+    .card:nth-child(even) {
+      padding: 30px 30px 30px 0;
+    }
+    /* Global ::before */
+    .card::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      border: solid orangered;
+    }
+    
+    /* Setting the border of top, bottom, left */
+    .card:nth-child(odd)::before {
+      left: 0px;
+      top: -4.5px;
+      bottom: -4.5px;
+      border-width: 5px 0 5px 5px;
+      border-radius: 50px 0 0 50px;
+    }
+    
+    /* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
+    @media only screen and (max-width: 400px) {
+      .card:nth-child(odd)::before {
+        top: -5px;
+        bottom: -5px;
+      }
+    }
+    
+    /* Setting the border of top, bottom, right */
+    .card:nth-child(even)::before {
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-width: 5px 5px 5px 0;
+      border-radius: 0 50px 50px 0;
+    }
+    
+    /* Removing the border if it is the first card */
+    .card:first-child::before {
+      border-top: 0;
+      border-top-left-radius: 0;
+    }
+    
+    /* Removing the border if it is the last card  and it's odd */
+    .card:last-child:nth-child(odd)::before {
+      border-bottom: 0;
+      border-bottom-left-radius: 0;
+    }
+    
+    /* Removing the border if it is the last card  and it's even */
+    .card:last-child:nth-child(even)::before {
+      border-bottom: 0;
+      border-bottom-right-radius: 0;
+    }
+    
+    /* Information about the timeline */
+    .info {
+      display: flex;
+      flex-direction: column;
+      background: #1746A2;
+      color: white;
+      border-radius: 10px;
+      padding: 40px;
+    }
+    
+    /* Title of the card */
+    .title {
+      color: orangered;
+      position: relative;
+    }
+    
+    /* Timeline dot  */
+    .title::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 999px;
+      border: 3px solid orangered;
+    }
+    
+    /* text right if the card is even  */
+    .card:nth-child(even) > .info > .title {
+      text-align: right;
+    }
+    
+    /* setting dot to the left if the card is odd */
+    .card:nth-child(odd) > .info > .title::before {
+      left: -45px;
+    }
+    
+    /* setting dot to the right if the card is odd */
+    .card:nth-child(even) > .info > .title::before {
+      right: -45px;
+    }
+  
+  
+    .timeline {
+      transition: background 0.5s ease;
+    }
+  
+    .card.in-view {
+      opacity: 1;
+      transform: translateY(0);}
+  
+      nav {
+        background-color: #333;
+        padding: 22px;
+        text-align: right;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        margin-right: 20px;
+        z-index: 1000;
+    }
+  
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+  
+    nav li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+  
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+    }
+  
+    .timeline-container {
+        margin-top: 50px; /* Adjust this value based on the height of your navigation bar */
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- <nav>
+    
+    <ul>
+      <li style="text-align: left; margin-left:0;"><a href="#step-1">DEEd hub</a></li>
+        <li><a href="#step-1">Home</a></li>
+        <li><a href="#step-2">Procedure</a></li>
+        <li><a href="#step-3">Document</a></li>
+        <li><a href="#step-4">Buy</a></li>
+        <li><a href="#step-5">Sell</a></li>
+     
+    </ul>
+</nav> -->
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4  border-bottom back" style="margin-left: 10px!important;">
+        <a href="" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none ">
+          <img src="./images/logofinal.png"class="bi me-2" width="80" height="64" alt="" style="margin-left: 20px; margin-top: 20px; border-radius: 20%;">
+        </a>
+  
+       
+      </header>
+    <div class="timeline">
+      
+        <div class="outer">
+          <h1>PROCEDURE</h1>
+          <!-- .... card before this -->
+          
+        </div>
+          <div class="timeline">
+            <div class="outer">
+              <div class="card">
+                <div class="info">
+                 
+                  <h3 class="title">Step 1</h3><br>
+                  <time> Visit the Sub-Registrar Office:<br>
+
+                  <br>Go to the local office to check if the land is legit.<br>
+               Look at where the property is and check its ownership status and pending bills.<br>
+                    Make sure the legal document says the owner's name and check records for the last 30 years for any issues.
+
+                    </time>
+                  <p>
+
+      
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Step 2</h3>
+                  <p>Buyer's Lawyer Makes Sale Deed:<br>
+
+                    Your lawyer makes the final sale deed on green paper.<br>
+                    The document is submitted for stamping after leaving the date and place blank.<br>
+
+ </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Step 3</h3><br>
+                  <p>Pay Stamp Duty:<br><br>
+
+                    Go to a specific bank to pay stamp duty for the sale deed.<br>
+                    The bank gives you a receipt and marks the sale deed as 'stamp duty received'.<br>
+                    Stamp duty rates: 3% for properties up to INR 45 lakh, 5% for over INR 45 lakh, plus a 1% registration charge. <br></p>
+                    
+                    </p>
+
+                        <p>    
+                          </p>
+                          
+
+
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Step 4</h3>
+                  <p>Online Stamp Duty Payment:<br><br>
+
+                    Visit Khajane-2 or K2 website to create a challan for stamp duty and registration charges.<br>
+                    Fill in your details and property info, select payment mode, and submit the form.<br>
+                    Get a challan number valid for 90 days. Complete property registration within this time.<br>
+
+                     </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Step 5</h3>
+                  <p>Execute the Final Deed:<br><br>
+
+                    Finalize the deed at the local Sub-Registrar's office with buyer, seller, and witnesses.<br>
+                    The document is registered, and a unique number is assigned.<br>
+                    Pay a registration fee, usually 1% of the transaction value or a maximum of Rs 30,000.
+                     </p><br><br>
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Step 6</h3>
+                  <p>Apply for Title Deed Mutation:<br><br>
+
+                    Apply for title deed mutation at the City Survey and Land Records Department.<br>
+                    Submit a signed application, affidavit, indemnity bond, and notarized sale deed copy<br>.
+                    The department assesses your request, determines property tax, and issues a mutation letter<br>
+ </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Step 7</h3><br>
+                  <p>Confirmation of Ownership:<br><br>
+
+                    Once mutation is approved, you officially become the property owner.<br>
+                    The process takes about a month, and the associated costs include an application fee of Rs 100, Rs 200 for the indemnity bond, Rs 100 for the affidavit, and Rs 50 for notary charges.
+                    <br>Due to the complexity, consider seeking help from a property agent, consultant, and a qualified lawyer throughout the process.
+                    
+                     
+                          </p>
+                          
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              var cards = document.querySelectorAll('.card');
+            
+              function isInViewport(element) {
+                var rect = element.getBoundingClientRect();
+                return (
+                  rect.top >= 0 &&
+                  rect.left >= 0 &&
+                  rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                  rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+              }
+            
+              function addInViewClass() {
+                cards.forEach(function (card) {
+                  if (isInViewport(card)) {
+                    card.classList.add('in-view');
+                  }
+                });
+              }
+            
+              window.addEventListener('scroll', addInViewClass);
+              window.addEventListener('resize', addInViewClass);
+            
+              addInViewClass(); // Check on page load
+            });
+            
+          </script>
+</body>
+</html>

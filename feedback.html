@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button Questions</title>
+    <link  href="feedback.css" rel="stylesheet">
+
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <form method="POST" action="/feedback">
+        <h1 id="heading" style="text-align: center;">Feedback Form</h1>
+        <br>
+        <h3>Was the website useful:</h3>
+        <label><input type="radio" name="q1_option" value="very_good"> very Good</label>
+        <label><input type="radio" name="q1_option" value="good"> Good</label>
+        <label><input type="radio" name="q1_option" value="fair"> Fair</label>
+        <label><input type="radio" name="q1_option" value="bad"> Bad</label>
+        <label><input type="radio" name="q1_option" value="very_bad"> Very Bad</label>
+
+        <br><br>
+
+        <h3>Was the information enough</h3>
+        <label><input type="radio" name="q2_option" value="yes"> Yes</label>
+        <label><input type="radio" name="q2_option" value="no"> No</label>
+
+        <br><br>
+
+        <h3>Overall ratings</h3>
+        <label><input type="radio" name="q3_option" value="very_good"> very Good</label>
+        <label><input type="radio" name="q3_option" value="good"> Good</label>
+        <label><input type="radio" name="q3_option" value="fair"> Fair</label>
+        <label><input type="radio" name="q3_option" value="bad"> Bad</label>
+        <label><input type="radio" name="q3_option" value="very_bad"> Very Bad</label>
+
+        <br><br>
+        <label for="comments">Comments</label>
+        <input type="text" id="comments" name="comments">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+<style>body {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:beige
+}
+
+form {
+    width: 300px; /* Adjust the width as needed */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+</style>
+</body>
+</html>

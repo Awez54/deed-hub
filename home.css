@@ -1,0 +1,233 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+  
+    height: 100vh;
+  }
+  
+  #nav1{
+  text-shadow: #333;
+  }
+  
+  
+  h1 {
+    text-align: right;
+    color: rgb(237, 234, 234);
+    margin-top: 22px; /* Adjust as needed */
+    margin-right: 30px;
+  }
+  
+  
+  
+  .container {
+    position: relative;
+    z-index: 1;
+    
+  }
+  /* Hover effect for the first row */
+.row .col-lg-3:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for the About Us section */
+.heor:hover {
+    background-color: #f8f8f8;
+}
+
+  .center-box {
+  background-image: url('https://images.unsplash.com/photo-1558036117-15d82a90b9b1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    padding: 111px;
+    background-position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  Optional: Add a box shadow */
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 190px;
+    margin-right: 190px;
+    margin-bottom: 100px;
+    width: 900px;
+    height:550px;
+    box-sizing: border-box;
+    padding: 20px;
+    align-self: center;
+    @media  (min-width:481px ) and (max-width :1024px){
+      .center-box
+      {
+        padding: 1rem;
+      }
+    }
+  
+  
+  }
+  p{
+    text-align: center;
+  }
+  .services {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  /* Style the heading */
+  .heading {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  
+  /* Style the box container */
+  .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Style individual boxes */
+  .box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    width: 250px;
+    text-align: center;
+  }
+  
+  /* Style the box images */
+  .box img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the box headings */
+  .box h3 {
+    color: #555;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the box paragraphs */
+  .box p {
+    color: #777;
+    font-size: 1em;
+  }
+  
+  .heading.left-align {
+    text-align: center;
+  }
+  footer {
+    display: block;
+    background-color:#5F9DF7;
+    color: white;
+  }
+  
+    
+  #carouselExampleDark {
+    height: 500px; /* Adjust the height as needed */
+    object-fit: cover
+  }
+  #carouselExampleDark .carousel-inner {
+    height: 100%;
+  }
+  
+  
+  /* Custom styles for the carousel */
+  #carouselExampleDark {
+    width: 100%;
+    max-width: 90%; /* Adjust the maximum width as needed */
+    margin: auto;
+  }
+  
+  #carouselExampleCaptions .carousel-inner {
+    height: 500px; /* Adjust the height as needed */
+  }
+  .rw{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  }
+  .simg{
+    height: 150px;
+    width: 150px;
+   
+  }
+  .col-lg-3 h2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
+  .col-lg-3 img{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 5rem!important;
+  }
+  #load{
+    margin-top: 40px;
+    margin-left:70px;
+  }
+  #navb{
+    font-size: 1.25rem;
+  }
+  .carousel-item {
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel-item:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Optional: Apply zoom-in effect on hover for carousel caption */
+  .carousel-caption {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carousel-item:hover .carousel-caption {
+    transform: scale(1.1);
+    /* Set text color */
+   
+    display: block;
+  }
+
+  .btn.more.border {
+    background-color: #f68f50; /* Green color on hover */
+  }
+  #abt{
+    height: 250px;
+    width: 250px;
+    border: none;
+    border-radius: 20%;
+  }
+  @keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.running-text {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    animation: marquee 10s linear infinite;
+    color: red;
+}
+
+    #zoom{
+        overflow: hidden;
+        position: relative;
+        transition: transform 0.3s ease; /* Add a smooth transition effect */
+    }
+
+    #zoom:hover {
+        transform: scale(1.1); /* Increase the scale for the zoom effect */
+  }

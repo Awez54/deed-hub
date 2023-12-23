@@ -1,0 +1,50 @@
+
+    .body {
+        user-select: none;
+        overflow-y: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: hsl(218deg 50% 91%);
+        height: 100vh;
+        margin: 0; /* Remove default margin */
+    }
+
+    .login-box {
+        width: 320px;
+        height: 420px;
+        background: ;
+        margin: 100px auto;
+        padding: 40px;
+        border: 1px solid #CBD9D9;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        margin-bottom: 20%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: xx-large;
+    }
+
+    button {
+        background: hsl(0, 12%, 74%);
+        box-shadow: 0 0 2em hsl(210, 100%, 100%);
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.5em;
+        border-radius: 20px;
+        color: hsl(0deg 0% 30%);
+        margin-left: 10%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 250px;
+        height: 100px;
+        transition: background-color 0.3s;
+        cursor: pointer; /* Move cursor property to the general button style */
+    }

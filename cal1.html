@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Land Buying Cost Calculator - Karnataka</title>
+  <!-- <link rel="stylesheet" href="calculator.css"> -->
+</head>
+<h1>Property Tax</h1>
+<body>
+
+  <div class="header-container" style="text-align: left ; ">
+  
+    
+
+<h2><strong>What is Property Tax in India</strong></h2>
+<p style="margin-left: 25px;"><span style="font-weight: 400;">In India, owners of real estate properties are subject to pay a property tax. It is an annual charge levied by the Government of India on property owners. This tax is collected by the local government or the Municipal Corporation, whoever is authorised to do so in a given state.&nbsp;</span></p>
+<p style="margin-left: 25px;"><span style="font-weight: 400;">Here, the term &lsquo;property&rsquo; refers to land and improvements made to the same.</span></p>
+<p style="margin-left: 25px;"><span style="font-weight: 400;">The government appraises the value of such properties and assesses the tax in proportion to its value. The Municipality of a particular area carries the responsibility of conducting this assessment and determines the tax payable by a property owner.&nbsp;</span></p>
+<p style="margin-left: 25px;"><span style="font-weight: 400;">Property tax can be paid on an annual or semi-annual basis. This tax varies with each location, city and state.</span></p><br>
+
+<h2><strong>Pay Property Tax Online</strong></h2>
+<p style="margin-left: 25px;"><span style="font-weight: 400;">An individual can </span><strong>pay property tax online</strong><span style="font-weight: 400;"> by following the steps mentioned below:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">First, log in to the official portal of the municipal corporation of their city/state.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Select the option &lsquo;Property Tax&rsquo; and then move to the payments option.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Fill out the property tax form and choose the assessment year.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Select the mode of payment from the options provided therein. One can choose between debit/credit cards or net banking.&nbsp;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Successful payment generates an electronic challan.&nbsp;</span></li>
+</ul>
+<h2><strong>Tax Application Number</strong></h2>
+<p style="margin-left: 25px;"><span style="font-weight: 400;">Knowing your tax application number is essential if you choose to pay your property taxes online.
+    <span style="font-weight: 400;">Knowing your tax application number is essential if you choose to pay your property taxes online.</span></p>
+<p style="margin-left: 25px;"><span style="font-weight: 400;">Follow the procedures below to find out your new application number online:</span></p>
+<ul>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Navigate to your municipality&rsquo;s property tax page.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Select &ldquo;GIS-based New PID.&rdquo;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">At the bottom of the page, look for &ldquo;To Know Your New PID Click Here.&rdquo;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Enter the old application number and press the &ldquo;search&rdquo; button.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Choose a name and click &ldquo;Fetch.&rdquo;</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">The information will be displayed on the screen. Look for inconsistencies in the details.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Click on &ldquo;View your property in Map&rdquo; for additional information.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Locate the property using Google Maps.</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Details can be downloaded or saved.</span></li>
+</ul>
+  </div>
+<br><br>
+  <div class="main-container">
+    <div class="container" style="background-color:#1746A2">
+      <form id="cost-form">
+        <label for="property-value">Property Value in rupees</label>
+        <input type="number" id="property-value" required>
+        <label for="location">Location:</label>
+        <select id="location">
+          <option value="bangalore">Bangalore</option>
+          <option value="mysore">Mysore</option>
+          <option value="mangalore">Mangalore</option>
+          <option value="hubli-dharwad">Hubli-Dharwad</option>
+        </select>
+        <button style="align-items: center;" type="button" onclick="calculateCost()">Calculate Cost</button>
+      </form>
+      <div id="cost-results"><p>Result</p></div>
+    </div>
+    <div id = empty class="empty-container">
+        <h3 style="margin: 0;">Parameters considerd for calculation</h3>
+      <p>Property Value:<br>
+
+        This is the total value of the property in rupees that the user enters into the form. It represents the cost of the land that the buyer is willing to pay.<br><br>
+        Location:<br>
+        
+        The user selects the location of the property from a dropdown list, including options like Bangalore, Mysore, Mangalore, and Hubli-Dharwad. Different cities may have different stamp duty rates.<br><br>
+        Stamp Duty Rate:<br>
+        
+        Based on the selected location, a predefined stamp duty rate is applied. Stamp duty is a tax levied by the government on property transactions. The rates vary for different cities.<br><br>
+        Registration Fee:<br>
+        
+        A registration fee is calculated as 1% of the property value. This fee is associated with registering the property transaction and making it legally valid.<br><br>
+        Estimated Stamp Duty:<br>
+        
+        Calculated by multiplying the property value with the applicable stamp duty rate. It represents the amount of stamp duty the buyer needs to pay.<br><br>
+        Estimated Registration Fee:<br>
+        
+        Calculated as 1% of the property value. This fee covers the cost of registering the property transaction.<br><br>
+        <!-- Total Estimated Cost:<br>
+        
+        The sum of the estimated stamp duty and registration fee. This represents the overall estimated cost that the buyer will incur for the land purchase.</p><br> -->
+    </div>
+  </div>
+
+  <script>
+    const registrationFee = 0.01; // 1% of property value
+    const stampDutyRates = {
+      bangalore: 0.0575,
+      mysore: 0.035,
+      mangalore: 0.035,
+      "hubli-dharwad": 0.035,
+    };
+
+    function calculateCost() {
+      // Get user input values
+      const propertyValue = parseFloat(document.getElementById("property-value").value);
+      const location = document.getElementById("location").value;
+
+      // Use stored rate for selected city from the list
+      const stampDutyRate = stampDutyRates[location] || 0; // Default to 0 if not found
+
+      // Calculate cost components
+      const stampDuty = propertyValue * stampDutyRate;
+      const registrationCost = propertyValue * registrationFee;
+
+      // Display cost results
+      const costResults = document.getElementById("cost-results");
+      costResults.innerHTML = ""; // Clear previous results
+      costResults.innerHTML += <p>Estimated Stamp Duty: Rs. ${stampDuty.toFixed(2)}</p>;
+      costResults.innerHTML += <p>Estimated Registration Fee: Rs. ${registrationCost.toFixed(2)}</p>;
+      costResults.innerHTML += <p>Total Estimated Cost: Rs. ${(stampDuty + registrationCost).toFixed(2)}</p>;
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color:#FAF9F6;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header-container {
+      text-align: center;
+      background-color: #ffffff;
+      color: #000000;
+      padding: 10px;
+      margin-left: 50px;
+      margin-right: 50px;
+      
+    }
+
+    .main-container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .container {
+      flex: 1;
+    }
+
+    .empty-container {
+      flex: 1;
+      background-color:white;
+    }
+
+    h1 {
+      text-align: center;
+      color: #000000;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    background-color: white;
+      padding: 20px;
+      margin-top: 90px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #FF731D;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+      align-content: center;
+      margin-left: 140px;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #ff7518;
+    }
+
+    #cost-results {
+        max-height: 200px; /* Adjust the max height as needed */
+        overflow-y: auto; /* Add a scrollbar if content overflows */
+        margin: 20px auto; /* Center-align horizontally */
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 8px;
+        width: 420px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center; /* Center-align the content inside the division */
+      }
+      
+      #empty{
+        padding: 20px;
+        background-color:white ;
+      }
+
+    p {
+      margin: 8px 0;
+    }
+  </style>
+</body>
+
+</html>
